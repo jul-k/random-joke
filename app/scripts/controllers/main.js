@@ -20,12 +20,15 @@ angular.module('quotesApp')
     }])
   .controller('MainCtrl',  ['$scope', 'JokesFactory', function($scope, JokesFactory) {
     $scope.jokesList = [];
+    $scope.currentJoke = null;
+
     JokesFactory.getJokesFuture().success(function (data) {
         $scope.jokesList = data;
-        console.log("Loaded");
+        $scope.currentJoke = data.value[2].joke;
     })
 
     $scope.randomJoke = function () {
-
-    }
+        var randomIndex = Math.random() * $scope.jokesList.value.length;
+        $scope.currentJoke = $scope.jokesList.value[Math.floor(randomIndex)].joke;
+    };
 }]);

@@ -1,11 +1,11 @@
 <div class="row">
     <div class="col-sm-offset-2 col-sm-8">
-      <p>{{jokesList.value[2].joke}}</p>
+      <p>{{currentJoke}}</p>
     </div>
 </div>
 <div class="row">
   <div class="col-sm-offset-2 col-sm-8 text-center">
     <a class="btn btn-default" href="https://twitter.com/intent/tweet" role="button"><i class="fa fa-twitter"></i> Tweet it!</a>
-    <button class="btn btn-default"><i class="fa fa-random"></i> Another joke</button>
+    <button class="btn btn-default" ng-click='randomJoke()'><i class="fa fa-random"></i> Another joke</button>
   </div>
 </div>
