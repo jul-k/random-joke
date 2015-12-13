@@ -23,12 +23,12 @@ angular.module('quotesApp')
     $scope.currentJoke = null;
 
     JokesFactory.getJokesFuture().success(function (data) {
-        $scope.jokesList = data;
+        $scope.jokesList = data.value;
         $scope.currentJoke = data.value[2].joke;
     })
 
     $scope.randomJoke = function () {
-        var randomIndex = Math.random() * $scope.jokesList.value.length;
-        $scope.currentJoke = $scope.jokesList.value[Math.floor(randomIndex)].joke;
+        var randomIndex = Math.random() * $scope.jokesList.length;
+        $scope.currentJoke = $scope.jokesList[Math.floor(randomIndex)].joke;
     };
 }]);
