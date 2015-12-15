@@ -21,3 +21,9 @@ button {
 .btn:first-child {
   margin-right: 20px;
 }
+
+@media screen and (max-width: 1008px) {
+    body {
+        background: rgba(140, 220, 144, 0.23);
+    }
+}

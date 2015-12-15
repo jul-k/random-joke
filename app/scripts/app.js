@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'classy'
+    'classy',
+    'rt.encodeuri'
   ])
   .config(function ($routeProvider) {
     $routeProvider

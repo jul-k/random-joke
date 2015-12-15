@@ -25,7 +25,7 @@ angular.module('quotesApp')
     JokesFactory.getJokesFuture().success(function (data) {
         $scope.jokesList = data.value;
         $scope.currentJoke = data.value[2].joke;
-    })
+    });
 
     $scope.randomJoke = function () {
         var randomIndex = Math.random() * $scope.jokesList.length;
