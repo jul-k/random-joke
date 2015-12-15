@@ -5,7 +5,7 @@ body {
 
 p {
   text-align: center;
-  margin-top: 250px;
+  margin-top: 350px;
   font-size: 20px;
   font-family: 'Marko One', serif;
 }
@@ -25,5 +25,9 @@ button {
 @media screen and (max-width: 1008px) {
     body {
         background: rgba(140, 220, 144, 0.23);
+    }
+
+    p {
+        margin-top: 250px;
     }
 }

@@ -21,6 +21,7 @@ angular.module('quotesApp')
   .controller('MainCtrl',  ['$scope', 'JokesFactory', function($scope, JokesFactory) {
     $scope.jokesList = [];
     $scope.currentJoke = null;
+    $scope.host = window.location.hostname;
 
     JokesFactory.getJokesFuture().success(function (data) {
         $scope.jokesList = data.value;

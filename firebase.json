@@ -1,5 +1,5 @@
 {
-  "firebase": "shining-fire-3095",
+  "firebase": "random-joke",
   "public": "dist",
   "ignore": [
     "firebase.json",
