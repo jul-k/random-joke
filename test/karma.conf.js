@@ -33,6 +33,7 @@ module.exports = function(config) {
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/angular-classy/angular-classy.js',
       'bower_components/angular-encode-uri/dist/angular-encode-uri.js',
+      'bower_components/snabbt.js/snabbt.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

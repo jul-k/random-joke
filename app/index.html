@@ -5,6 +5,12 @@
     <title>Random Joke</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
+    <meta property="og:title" content="Jokes about Chuck Norris" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://random-joke.firebaseapp.com/" />
+    <meta property="og:image" content="images/og.png" />
+
     <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="images/approved.png" type="image/png">
@@ -56,9 +62,9 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-classy/angular-classy.js"></script>
     <script src="bower_components/angular-encode-uri/dist/angular-encode-uri.js"></script>
+    <script src="bower_components/snabbt.js/snabbt.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    <script src="bower_components/snabbt.js/snabbt.min.js"></script>
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
@@ -66,6 +72,7 @@
         <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
         <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+        <script src="scripts/snabbt.min.js"></script>
 
 </body>
 </html>
