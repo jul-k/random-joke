@@ -1,33 +1,60 @@
 body {
-  background: url(../images/wall.png) no-repeat;
+  background: url(../images/kitty-chuck.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 p {
   text-align: center;
-  margin-top: 350px;
-  font-size: 20px;
-  font-family: 'Marko One', serif;
+  font-size: 30px;
+  font-family: 'Fredericka the Great', sans-serif;
+  color: #000;
 }
 
 .text-center {
   margin-top: 20px;
 }
 
+.btn {
+    margin-bottom: 20px;
+    border: none;
+}
+
 button {
   text-align: center;
+  outline: 0 !important;
 }
 
 .btn:first-child {
   margin-right: 20px;
 }
 
-@media screen and (max-width: 1008px) {
-    body {
-        background: rgba(140, 220, 144, 0.23);
+.btn-default:focus, .btn-default:active, .btn-default:hover, .btn-default:visited {
+    border: none;
+}
+
+@media screen and (max-width: 850px) {
+    p {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    p {
+        font-size: 20px;
     }
 
-    p {
-        margin-top: 250px;
+    .github-corner {
+        display: none;
     }
 }
