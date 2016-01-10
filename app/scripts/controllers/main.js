@@ -8,8 +8,6 @@
  * Controller of the quotesApp
  */
 
-
-
 angular.module('quotesApp')
     .factory('JokesFactory', ['$http', function($http) {
         return {
@@ -18,18 +16,28 @@ angular.module('quotesApp')
             }
         };
     }])
-  .controller('MainCtrl',  ['$scope', 'JokesFactory', function($scope, JokesFactory) {
-    $scope.jokesList = [];
-    $scope.currentJoke = null;
-    $scope.host = window.location.hostname;
+    .controller('MainCtrl', ['$scope', 'JokesFactory', function($scope,
+        JokesFactory) {
+        $scope.jokesList = [];
+        $scope.currentJoke = null;
+        $scope.host = window.location.hostname;
 
-    JokesFactory.getJokesFuture().success(function (data) {
-        $scope.jokesList = data.value;
-        $scope.currentJoke = data.value[2].joke;
-    });
+        JokesFactory.getJokesFuture().success(function(data) {
+            $scope.jokesList = data.value;
+            $scope.currentJoke = data.value[2].joke;
+        });
 
-    $scope.randomJoke = function () {
-        var randomIndex = Math.random() * $scope.jokesList.length;
-        $scope.currentJoke = $scope.jokesList[Math.floor(randomIndex)].joke;
-    };
-}]);
+        $scope.randomJoke = function() {
+            var randomIndex = Math.random() * $scope.jokesList.length;
+            $scope.currentJoke = $scope.jokesList[Math.floor(
+                randomIndex)].joke;
+        };
+
+        $scope.btnEffect = function(event) {
+            snabbt(event.target, 'attention', {
+                rotation: [0, 0, Math.PI / 2],
+                springConstant: 1.9,
+                springDeceleration: 0.9,
+            });
+        };
+    }]);
