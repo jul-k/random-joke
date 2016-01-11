@@ -1,5 +1,6 @@
 body {
-  background: url(../images/kitty-chuck.png) no-repeat center center fixed;
+  background: url(../images/kitty-chuck.png) no-repeat fixed;
+  background-position: 3% 64%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
